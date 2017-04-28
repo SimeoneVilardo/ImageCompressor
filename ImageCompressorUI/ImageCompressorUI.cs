@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageCompressorCore;
+using System;
 using System.Windows.Forms;
 
 namespace ImageCompressorUI
@@ -17,6 +18,13 @@ namespace ImageCompressorUI
             dialog.Title = "Seleziona un file o una directory";
             if (dialog.ShowDialog(this) == DialogResult.OK)
                 txtPath.Text = dialog.Selected;
+        }
+
+        private void btnCompress_Click(object sender, EventArgs e)
+        {
+            string path = txtPath.Text;
+            ImageCompressor imgCompressor = new ImageCompressor();
+            imgCompressor.CompressImage(path, 50);
         }
     }
 }

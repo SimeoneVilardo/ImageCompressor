@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImageCompressorCore\ImageCompressorCore.csproj">
+      <Project>{adf963ff-9f1a-47c5-aed8-d7b4d1465782}</Project>
+      <Name>ImageCompressorCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
